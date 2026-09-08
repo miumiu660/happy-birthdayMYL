@@ -1,0 +1,10 @@
+import {cpSync,existsSync,readdirSync,readFileSync,statSync,writeFileSync} from 'node:fs';
+import {join} from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=fileURLToPath(new URL('../',import.meta.url));
+const out=join(root,'out'),prefix='/happy-birthdayMYL';
+if(!existsSync(join(out,'index.html')))throw new Error('Static export did not create out/index.html');
+writeFileSync(join(out,'.nojekyll'),'');
+const textExtensions=new Set(['.html','.js','.css','.json','.txt','.xml']);
+const walk=dir=>{for(const name of readdirSync(dir)){const path=join(dir,name);if(statSync(path).isDirectory())walk(path);else if([...textExtensions].some(ext=>path.endsWith(ext))){let body=readFileSync(path,'utf8');body=body.replaceAll('"/images/','"'+prefix+'/images/').replaceAll("'/images/","'"+prefix+'/images/').replaceAll('"/assets/','"'+prefix+'/assets/').replaceAll("'/assets/","'"+prefix+'/assets/').replaceAll('"/fonts/','"'+prefix+'/fonts/').replaceAll("'/fonts/","'"+prefix+'/fonts/').replaceAll('url(/images/','url('+prefix+'/images/').replaceAll('url("/images/','url("'+prefix+'/images/').replaceAll("url('/images/","url('"+prefix+'/images/').replaceAll('url(/fonts/','url('+prefix+'/fonts/').replaceAll("url('/fonts/","url('"+prefix+'/fonts/');writeFileSync(path,body);}}};
+walk(out);

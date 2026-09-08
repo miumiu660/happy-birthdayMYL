@@ -1,0 +1,12 @@
+'use client';
+import { useCallback, useEffect, useRef, useState } from 'react';
+const kinds=['tear-paper','peel-film','sticker-peel','stamp-tear','fabric-rub','cellophane','paper-drop','collage-place','thread-pull'];
+export function usePaperAudio(){
+ const [on,setOn]=useState(true);
+ const state=useRef<{ctx:AudioContext|null;master:GainNode|null;buffers:Record<string,AudioBuffer[]>;loading:boolean;on:boolean;voices:Set<AudioBufferSourceNode>;last:number}>({ctx:null,master:null,buffers:{},loading:false,on:true,voices:new Set(),last:0});
+ useEffect(()=>{try{const enabled=sessionStorage.getItem('peel-here-sound')!=='off';state.current.on=enabled;setOn(enabled);}catch{}return()=>{void state.current.ctx?.close();};},[]);
+ const unlock=useCallback(()=>{const s=state.current;if(!s.ctx){s.ctx=new AudioContext();s.master=s.ctx.createGain();s.master.gain.value=s.on?1:0;s.master.connect(s.ctx.destination);}void s.ctx.resume();if(s.loading)return;s.loading=true;void Promise.all(kinds.map(async k=>{const loaded=await Promise.all([1,2,3].map(async n=>{try{const r=await fetch('/assets/audio/'+k+'-0'+n+'.wav');if(!r.ok)return null;return await s.ctx!.decodeAudioData(await r.arrayBuffer());}catch{return null;}}));s.buffers[k]=loaded.filter((b):b is AudioBuffer=>!!b);}));},[]);
+ const play=useCallback((kind:string,intensity=1,snippet=false)=>{const s=state.current;if(!s.on||!s.ctx||!s.master||!s.buffers[kind]?.length)return;if(s.voices.size>=3||(snippet&&performance.now()-s.last<110))return;s.last=performance.now();const source=s.ctx.createBufferSource(),gain=s.ctx.createGain();source.buffer=s.buffers[kind][Math.floor(Math.random()*s.buffers[kind].length)];source.playbackRate.value=.94+Math.random()*.12;const t=s.ctx.currentTime,duration=snippet?.12:Math.min(source.buffer.duration,.65);gain.gain.setValueAtTime(0,t);gain.gain.linearRampToValueAtTime(Math.min(.13,(snippet?.06:.10)*intensity),t+.012);gain.gain.exponentialRampToValueAtTime(.001,t+duration);source.connect(gain).connect(s.master);s.voices.add(source);source.onended=()=>{s.voices.delete(source);source.disconnect();gain.disconnect();};source.start(t,0,duration);},[]);
+ const toggle=()=>{const s=state.current;s.on=!s.on;setOn(s.on);try{sessionStorage.setItem('peel-here-sound',s.on?'on':'off');}catch{}if(s.master&&s.ctx)s.master.gain.setTargetAtTime(s.on?1:0,s.ctx.currentTime,.015);if(s.on)unlock();};
+ return {on,toggle,unlock,play};
+}

@@ -1,0 +1,63 @@
+.stage{height:min(79svh,760px)}
+.game-footer{display:none!important}
+.apple-birthday{position:absolute;left:55%;top:49%;width:17%;height:19%;display:grid;place-items:center;transform:rotate(-13deg);color:#fff0d6;font:600 clamp(14px,2vw,25px) "SimSun",serif;letter-spacing:.07em;text-shadow:0 1px 2px #661c28}
+.photo-scene{background:linear-gradient(115deg,#cad1bcaa,#e8e4d394),url('/images/embroidery.jpg') center/cover}
+.photo-image img{filter:none;object-position:50% 43%}
+.cloth-birthday{position:absolute;inset:25% 8%;text-align:center;font:clamp(48px,8vw,100px)/.95 Georgia,serif;letter-spacing:-.065em;color:#95566a;transform:rotate(-6deg)}
+.cloth-birthday em{font-weight:normal}
+.textile-scene{background:repeating-linear-gradient(0deg,#c8bca11a 0 1px,transparent 1px 4px),repeating-linear-gradient(90deg,#c8bca118 0 1px,transparent 1px 4px),#f6f0e2}
+.embroidered-cloth{transform:rotate(calc(-3deg + var(--thread,0)*1deg)) skewY(calc(var(--thread,0)*-.8deg));filter:drop-shadow(3px 9px 7px #5b483733)}
+.unravel-thread{position:absolute;left:15%;bottom:3%;width:75%;height:27%;background:none;border:0;padding:0;z-index:8;touch-action:none;cursor:grab}
+.unravel-thread:active{cursor:grabbing}.unravel-thread svg{width:100%;height:100%;overflow:visible}
+.postal-scene{background:linear-gradient(130deg,#d2b9ae,#c6a89f)}
+.postal-scene::after{display:none}
+.stamp-workspace{position:absolute;inset:0}
+.postcard-paper{position:absolute;left:8%;top:7%;width:84%;height:59%;background:repeating-linear-gradient(0deg,#b7aa8e0a 0 1px,transparent 1px 3px),#f7f1df;transform:rotate(-2deg);box-shadow:2px 9px 18px #63423930}
+.postcard-rules{position:absolute;inset:12% 5%;border:1px solid #a5917438}
+.postcard-seal{position:absolute;right:6%;top:7%;color:#8b6558;font:italic 16px Georgia}
+.stamp-destinations{position:absolute;inset:20% 6% 13%;display:grid;grid-template-columns:repeat(4,1fr);gap:5%;align-items:center}
+.stamp-destination{position:relative;width:100%;aspect-ratio:.77;border:1px dashed #a99a7c77;border-radius:2px;background:#e8dec92b}
+.stamp-destination.occupied{border-color:transparent;background:none}
+.stamp-destination>i{position:absolute;inset:8%;border:1px solid #b8a88924}
+.birthday-stamp{display:flex;flex-direction:column;position:relative;width:100%;height:100%;padding:8% 8% 5%;background:#fbf4df;border:5px dotted #c6a89f;box-shadow:1px 3px 4px #674c342b}
+.birthday-stamp img{display:block;width:100%;height:80%;object-fit:cover;object-position:center}
+.birthday-stamp b{flex:1;display:grid;place-items:center;font:600 clamp(12px,1.45vw,19px) "SimSun",serif;color:#7e5258;letter-spacing:.08em;white-space:nowrap}
+.stamp-color-1{background:#e9eecf}.stamp-color-2{background:#eadde5}.stamp-color-3{background:#dde6e9}
+.newly-placed{position:absolute;inset:0;animation:stamp-settle .35s ease-out}
+.newly-placed .birthday-stamp{border-color:#f7f1df;box-shadow:1px 2px 2px #674c3420}
+.stamp-tray{position:absolute;left:16%;right:16%;bottom:5%;height:24%;display:flex;justify-content:space-between;gap:7%}
+.tray-stamp{position:relative;display:block;width:20%;height:100%;aspect-ratio:.77;background:none;border:0;padding:0;touch-action:none;cursor:grab;transform:rotate(5deg);transition:filter .15s;z-index:5}
+.tray-stamp:nth-child(even){transform:rotate(-5deg)}.tray-stamp.in-hand{z-index:20;cursor:grabbing;filter:drop-shadow(5px 12px 6px #5c363c33)}
+.tray-stamp.used{visibility:hidden}
+@keyframes stamp-settle{from{transform:scale(1.06) rotate(-3deg);filter:drop-shadow(3px 6px 4px #674c3433)}to{transform:scale(1) rotate(0)}}
+.butterfly-scene{background:#bbae8d}
+.atlas-page{position:absolute;object-fit:contain;filter:drop-shadow(2px 6px 5px #45321f30);pointer-events:none}
+.atlas-left{left:-5%;top:-9%;width:73%;height:91%;transform:rotate(-7deg)}
+.atlas-right{right:-7%;bottom:-11%;width:77%;height:94%;transform:rotate(7deg)}
+.living-butterfly:not(.flying) img{animation:none!important}
+.butterfly-6{left:9%;top:8%;width:19%;height:26%;transform:rotate(-15deg);--fly-x:-420px;--fly-y:-540px}
+.butterfly-7{left:64%;top:49%;width:16%;height:23%;transform:rotate(35deg);--fly-x:540px;--fly-y:-460px}
+.character-scene{background:#e4d9dc}
+.sticker-backing{position:absolute;inset:9% 6%;transform:rotate(-3deg);background:radial-gradient(#c7b6bd55 .8px,transparent .9px) 0 0/9px 9px,#fbf7ed;box-shadow:2px 8px 12px #69506425}
+.chiikawa-sticker{height:auto!important;filter:drop-shadow(2px 5px 3px #66525130)}
+.chiikawa-sticker .peel-surface{background:none!important}
+.chiikawa-sticker svg{width:100%;height:100%}
+.character-0{left:9%;top:37%;width:25%;aspect-ratio:335/362;transform:rotate(-9deg)}
+.character-1{left:37%;top:18%;width:28%;aspect-ratio:335/463;transform:rotate(3deg)}
+.character-2{left:69%;top:39%;width:25%;aspect-ratio:335/374;transform:rotate(11deg)}
+@media(max-width:700px){
+ .stage{height:80svh}
+ .apple-birthday{left:52%;top:50%;width:28%;height:15%;font-size:17px}
+ .postcard-paper{left:8%;width:84%;top:6%;height:65%}
+ .stamp-destinations{inset:12% 12% 8%;grid-template-columns:repeat(2,1fr);gap:6% 17%}
+ .stamp-destination{height:100%;width:auto;aspect-ratio:.8;max-width:100%;justify-self:center}
+ .stamp-tray{left:5%;right:5%;height:17%;bottom:6%;gap:4%}
+ .tray-stamp{width:22%}.birthday-stamp{border-width:3px}.birthday-stamp b{font-size:12px;letter-spacing:0}
+ .postcard-seal{font-size:12px;top:4%}
+ .atlas-left{width:112%;height:70%;left:-18%;top:-3%}.atlas-right{width:118%;height:72%;right:-23%;bottom:-5%}
+ .butterfly-6{left:8%;top:5%;width:23%;height:18%}.butterfly-7{left:64%;top:64%;width:21%;height:16%}
+ .character-0{left:5%;top:48%;width:29%}.character-1{left:33%;top:25%;width:35%}.character-2{left:68%;top:49%;width:29%}
+ .cloth-birthday{inset:32% 3%;font-size:58px}
+ .unravel-thread{left:6%;width:88%;bottom:8%;height:25%}
+}
+@media(prefers-reduced-motion:reduce){.newly-placed{animation:none}.living-butterfly.flying{animation-duration:.01s}.living-butterfly.flying img{animation:none}}

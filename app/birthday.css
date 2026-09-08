@@ -1,0 +1,98 @@
+@font-face{font-family:BirthdayCute;src:url('/fonts/kuaile.ttf') format('truetype');font-display:swap}
+.song-start{display:block;margin:8px auto;border:0;border-radius:20px;padding:10px 18px;background:#aa485e;color:#fff7e6;cursor:pointer}
+@font-face{font-family:BirthdayScript;src:url('/fonts/pacifico.ttf') format('truetype');font-display:swap}
+.cover-still{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.birthday-cover{background:#f4e6cf}
+.birthday-cover h1{inset:18% 16% 25%;font:clamp(68px,10vw,135px)/1 BirthdayCute,sans-serif;color:#b94054;letter-spacing:0;z-index:2}
+.scatter-letter{position:absolute;text-shadow:2px 3px 0 #fff8e5}
+.letter-0{left:1%;top:0;transform:rotate(-12deg)}.letter-1{left:25%;top:8%;transform:rotate(9deg)}.letter-2{left:48%;top:-3%;transform:rotate(-6deg)}.letter-3{left:75%;top:7%;transform:rotate(14deg)}
+.letter-4{left:3%;top:53%;transform:rotate(9deg)}.letter-5{left:29%;top:61%;transform:rotate(-11deg)}.letter-6{left:52%;top:48%;transform:rotate(7deg)}.letter-7{left:78%;top:62%;transform:rotate(-7deg)}
+.corner-arrow{position:absolute!important;inset:auto 2.5% 3% auto!important;width:85px!important;height:74px!important;color:#ba5262;z-index:7;pointer-events:none;overflow:visible;transform:rotate(8deg)}
+.corner-arrow path{stroke-width:3.5}
+.birthday-cover .opening-date{left:8%;bottom:8%;font:20px BirthdayCute;color:#9c4550}
+.cover-message{text-align:center;margin:18px auto 0;font:18px/1.7 BirthdayCute,"Microsoft YaHei",sans-serif;color:#82555b}
+.stage-0{height:min(72svh,710px)}
+.detached-label-back{position:absolute;left:14%;top:15%;width:30%;height:20%;border-radius:50%;display:grid;place-items:center;background:linear-gradient(150deg,#fff7e6,#f2d9db);box-shadow:3px 9px 10px #5a263c36,inset 0 0 0 2px #ffffffaa;color:#b74966;transform:rotate(-12deg);animation:label-turn .65s ease-out both}
+.detached-label-back span{font:clamp(23px,3vw,40px) BirthdayCute;white-space:nowrap}
+@keyframes label-turn{from{transform:translate(65%,70%) rotate(12deg) scale(.65);opacity:.4}to{transform:translate(0) rotate(-12deg) scale(1);opacity:1}}
+.magazine-under{inset:3%;background:#f7eedc}
+.magazine-under img{left:3%;top:3%;width:94%;height:94%;object-fit:cover;object-position:center;filter:none}
+.photo-image{isolation:isolate}.photo-image .smiling-puppy{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
+.photo-scene.dog-smiles .smiling-puppy{opacity:1}
+.plum-bloom{position:absolute;inset:6% 13%;transform:rotate(-8deg)}
+.plum-bloom{width:74%;height:88%;overflow:visible}
+.bloom-flower{transform:scale(.24) rotate(-18deg);transition:transform 2s cubic-bezier(.25,.1,.25,1);transition-delay:var(--bloom-delay)}
+.flowers-open .bloom-flower{transform:scale(1) rotate(0)}
+.plum-bloom img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transition:opacity 2.4s ease,filter 2.4s ease}
+.plum-open{opacity:0;filter:blur(2px)}.blooming .plum-open{opacity:1;filter:none}.blooming .plum-buds{opacity:0}
+.pink-scene{background:radial-gradient(ellipse at 70% 24%,#fff4e9 0,transparent 55%),repeating-linear-gradient(100deg,#bb8b8010 0 2px,transparent 2px 6px),#e7d9cc}
+.botanical-scene{background:linear-gradient(90deg,#d7e0cf55,transparent 36%),repeating-linear-gradient(0deg,#9fa38b15 0 1px,transparent 1px 27px),#f5f1df}
+.botanical-note em{font-family:BirthdayScript;font-size:38px;color:#607996}
+.cloth-birthday{inset:20% 2%;font:clamp(76px,10.5vw,140px)/1.25 BirthdayScript,cursive;letter-spacing:-.055em;color:#ad516c;text-shadow:2px 3px 0 #fff9e3;transform:rotate(-8deg)}
+.cloth-birthday em{font-style:normal}
+.birthday-stamp{padding:7%;position:relative}
+.birthday-stamp img{height:100%}
+.postal-scene{background:repeating-linear-gradient(90deg,#bb9a9230 0 1px,transparent 1px 7px),#d9bdb3}
+.postal-scene{background:url('/images/stationery-desk.png') center/cover}
+.pink-scene{background:url('/images/rose-tissue.png') center/cover}
+.textile-scene{background:linear-gradient(#fff7e544,#fff7e544),url('/images/stationery-desk.png') 80% 60%/cover}
+.botanical-scene{background:linear-gradient(#eff3e2bd,#eff3e2bd),url('/images/stationery-desk.png') 20% 80%/cover}
+.postcard-paper{left:4%;width:92%;top:12%;height:47%;background:none;box-shadow:none;transform:none}
+.stamp-destinations{inset:0;grid-template-columns:repeat(4,minmax(0,1fr));gap:3%;align-items:center}
+.stamp-destination.letter-envelope{width:100%;height:auto;aspect-ratio:.91;background:#fff5df;border:1px solid #d3b9a2;box-shadow:2px 7px 7px #72504b23;overflow:hidden;transform:rotate(-3deg)}
+.letter-envelope.envelope-1{background:#f0e3db;transform:rotate(2deg)}.letter-envelope.envelope-2{background:#e8ebdc;transform:rotate(-2deg)}.letter-envelope.envelope-3{background:#eee2e4;transform:rotate(4deg)}
+.envelope-fold{position:absolute;inset:0;clip-path:polygon(0 0,100% 0,50% 45%);background:linear-gradient(#fff6,#cbb59d44);border-top:1px solid #fff8}
+.letter-address{position:absolute;left:12%;right:12%;bottom:14%;display:grid;gap:9px}.letter-address i{height:1px;background:#bfa89166}.letter-address i:last-child{width:65%}
+.letter-envelope>i{inset:10% 8% 45% 49%;border:1px dashed #b99b8688;background:#fff3;z-index:1}
+.letter-envelope .newly-placed{inset:8% 7% 43% 47%;z-index:2}
+.letter-envelope .birthday-stamp{border-width:3px;border-color:transparent}
+.letter-envelope .birthday-stamp b{font-size:clamp(20px,2.5vw,33px)}
+.stamp-tray{left:12%;right:12%;bottom:8%;height:25%;align-items:center;gap:9%}
+.tray-stamp{height:85%;width:20%}.tray-stamp:nth-child(1){transform:rotate(-14deg) translateY(9%)}.tray-stamp:nth-child(2){transform:rotate(11deg) translateY(-8%)}.tray-stamp:nth-child(3){transform:rotate(-6deg) translateY(15%)}.tray-stamp:nth-child(4){transform:rotate(16deg) translateY(-5%)}
+.birthday-stamp b{position:absolute;bottom:13%;right:14%;font:clamp(28px,4vw,52px) BirthdayCute;color:#fff8d9;text-shadow:2px 2px 0 #7c394d,-1px -1px 0 #7c394d;transform:rotate(-9deg)}
+.stamp-color-1 b{top:12%;bottom:auto;left:12%;right:auto;color:#ffd8d5;transform:rotate(8deg)}
+.stamp-color-2 b{left:12%;right:auto;color:#f5db6d}.stamp-color-3 b{top:12%;bottom:auto;color:#e2f1d3}
+.friends-picture{position:absolute;left:10%;top:15%;width:80%;height:70%;object-fit:contain;opacity:0;transform:scale(.95) rotate(-2deg);transition:opacity 1s ease,transform 1.4s ease;filter:drop-shadow(2px 7px 7px #69506433)}
+.friends-revealed .friends-picture{opacity:1;transform:scale(1) rotate(-2deg)}
+.character-scene{background:repeating-linear-gradient(45deg,#dcbecb33 0 12px,transparent 12px 24px),#f1e0df}
+.photo-scene{background:repeating-linear-gradient(0deg,#f2ecdc66 0 20px,transparent 20px 40px),repeating-linear-gradient(90deg,#f2ecdc66 0 20px,transparent 20px 40px),#a4b8a6}
+.tracing-scene{background:repeating-linear-gradient(45deg,#cec2a52a 0 1px,transparent 1px 9px),#eee4cc}
+.under-tracing img{left:8%;top:6%;width:84%;height:88%;object-fit:contain;transform:rotate(7deg)}
+.birthday-check{width:min(650px,94vw);margin:18px auto;background:#fff7e9;padding:22px;box-shadow:3px 10px 30px #693c4d1c;border:1px solid #dac6b8}
+.birthday-check header{position:relative;padding:5px 0 18px;border-bottom:2px solid #d8a2a8}
+.birthday-check h2{font:34px BirthdayCute;margin:0 0 9px;color:#a84159}
+.birthday-check p{font-size:14px;line-height:1.6;margin:0;color:#705759}
+.check-number{position:absolute;right:0;top:4px;font:16px BirthdayCute;color:#ac6470}
+.birthday-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:16px 0}
+.birthday-tile{position:relative;aspect-ratio:1;background:#e9e0cc;border:0;padding:0;overflow:hidden;cursor:pointer;outline-offset:2px}
+.birthday-tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .2s}
+.birthday-tile.selected{box-shadow:inset 0 0 0 4px #ab4f65}.birthday-tile.selected img{transform:scale(.9)}
+.photo-word{position:absolute;font:52px BirthdayCute;color:#fff5d4;left:14%;bottom:13%;transform:rotate(-9deg);text-shadow:2px 2px 0 #93465b}
+.tile-2 .photo-word{left:auto;right:17%;top:12%;bottom:auto}.tile-4 .photo-word{color:#ad5375;transform:rotate(12deg);text-shadow:2px 2px 0 #fff6e0}.tile-7 .photo-word{right:10%;left:auto;color:#fff7be}
+.selection-check{position:absolute;right:7px;top:7px;background:#ab4f65;color:white;width:26px;height:26px;border-radius:50%;display:grid;place-items:center}.selection-check svg{width:18px}
+.birthday-check footer{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:44px}
+.birthday-check footer>span{font:16px BirthdayCute;color:#a84159}
+.verify-button{border:0;border-radius:6px;background:#a84159;color:#fff5e6;font:21px BirthdayCute;padding:10px 24px;display:flex;align-items:center;gap:8px;cursor:pointer}
+.verify-button svg{width:20px}.passed .verify-button{background:#567964}
+@media(max-width:700px){
+ .birthday-cover h1{inset:28% 10% 30%;font-size:17vw}
+ .corner-arrow{width:66px!important;height:58px!important;right:3%!important;bottom:3%!important}
+ .cover-message{font-size:15px;max-width:92vw;margin-top:13px}
+ .cover-still{object-position:center}
+ .detached-label-back{left:8%;top:17%;width:43%;height:14%}
+ .detached-label-back span{font-size:24px}
+ .cloth-birthday{inset:28% 1%;font-size:18vw;line-height:1.3}
+ .plum-bloom{inset:12% 3%}
+ .plum-bloom{width:94%;height:76%}
+ .stamp-destinations{inset:30% 3%;grid-template-columns:repeat(4,1fr);gap:3%;align-items:center}
+ .stamp-destination{height:auto;width:100%;aspect-ratio:.72}
+ .postcard-paper{height:51%;top:10%}.stamp-tray{height:19%;bottom:12%}
+ .birthday-stamp b{font-size:28px}
+ .friends-picture{left:7%;width:86%;top:12%;height:76%}
+ .birthday-check{padding:14px;margin-top:10px}.birthday-check h2{font-size:28px}.birthday-check p{font-size:13px;max-width:88%}.check-number{font-size:12px}
+ .postcard-paper{left:3%;width:94%;top:17%;height:30%}.stamp-destinations{inset:0;gap:2%;grid-template-columns:repeat(4,minmax(0,1fr))}.stamp-destination.letter-envelope{aspect-ratio:.7}
+ .letter-envelope .newly-placed{inset:9% 9% 38% 15%}.letter-envelope>i{inset:9% 9% 38% 15%}.letter-envelope .birthday-stamp b{font-size:23px}.letter-address{bottom:10%;gap:6px}
+ .stamp-tray{left:7%;right:7%;bottom:18%;height:22%;gap:5%}.tray-stamp{height:82%;width:23%}
+ .birthday-grid{gap:7px}.photo-word{font-size:36px}
+}
+@media(prefers-reduced-motion:reduce){.detached-label-back{animation:none}.bloom-flower,.plum-bloom img,.friends-picture,.smiling-puppy{transition:none!important}.birthday-tile img{transition:none}}

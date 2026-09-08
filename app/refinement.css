@@ -1,0 +1,77 @@
+/* The physical front stays fixed. Only the region beyond the peel line folds. */
+.usagi-paper{aspect-ratio:335/463;height:75%;width:auto;left:50%;top:12%;transform:translateX(-50%) rotate(-5deg)}.usagi-main .usagi-art{width:100%;height:100%;overflow:visible;filter:drop-shadow(2px 0 white) drop-shadow(-2px 0 white) drop-shadow(0 2px white) drop-shadow(2px 7px 4px #75562433)}
+.peel-object.ear-target{top:0;bottom:auto;width:21.49%;height:30.24%;z-index:4}.peel-object.ear-target-left{left:28.65%;right:auto}.peel-object.ear-target-right{left:52.24%;right:auto}.ear-art{width:100%;height:100%;overflow:visible;filter:drop-shadow(2px 0 white) drop-shadow(-2px 0 white)}
+.physical-peel.ear-target-left .peel-surface{transform-origin:50% 100%;transform:rotate(calc(var(--p)*-38deg)) translateX(calc(var(--p)*-12%))!important}.physical-peel.ear-target-right .peel-surface{transform-origin:50% 100%;transform:rotate(calc(var(--p)*38deg)) translateX(calc(var(--p)*12%))!important}.left-free .usagi-art{animation:ear-release .5s ease}.right-free .usagi-art{animation:ear-release-right .5s ease}
+.physical-peel:not(.special-peel)>.peel-surface{transform:none!important;transition:none!important;will-change:clip-path;box-shadow:none!important;border-radius:0!important}
+.physical-peel .physical-fold{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:3}
+.fold-shadow{filter:drop-shadow(4px 7px 5px #2e342533)}
+.transparent-fold .fold-shadow{filter:drop-shadow(3px 5px 5px #3a4f2526)}
+.physical-peel.cover-film{pointer-events:auto;clip-path:none}
+.physical-peel.cover-film .peel-surface{background:linear-gradient(130deg,#ffffff04,#eff4ed22 67%,#f9fbfa44);border:1px solid #ffffff90;backdrop-filter:blur(.3px)}
+.physical-peel.held.cover-film .peel-surface{border-radius:0}
+.physical-peel.photo-film .peel-surface{border:1px solid #ffffffe0!important}
+.physical-peel.pearl-envelope .peel-surface{border-top:1px solid #f9f8f0!important}
+.physical-peel.apple-label .peel-surface{overflow:hidden}
+.physical-peel.embroidered-cloth .peel-surface{border-radius:0!important}
+.physical-peel.thread-pull .peel-surface{transform:translateX(calc(var(--p)*85%)) scaleX(calc(1 + var(--p)*.25))}
+.physical-peel.ear-target .peel-surface{transform:translateX(calc(var(--p)*20%)) rotate(calc(var(--p)*14deg))}
+.peel-object:disabled{opacity:1}
+.micro,.pull-chip,.photo-caption,.opening-number,.issue-label,.handwritten,.pink-type,.textile-caption,.butterfly-title,.butterfly-count,.usagi-scribble,.draft-note,.botanical-note p,.botanical-note>span,.postmark>span,.address,.collection-rail,.final-eyebrow,.final-bottom>span{display:none!important}
+.game-shell{background-color:#f3f2e9;padding-top:20px}
+.stage{width:min(1050px,88vw);height:min(72svh,720px);margin-top:20px;box-shadow:0 2px 3px #3627190a,0 16px 35px #36271916}
+.game-footer{position:relative;width:min(1050px,88vw);justify-content:center;margin-top:25px;min-height:48px}
+.chapter{position:absolute;left:0;color:#a7a696}.chapter>span{font:22px Georgia}.chapter i{font-size:10px}
+.chapter-copy{max-width:85%;text-align:center}
+.chapter-copy .birthday-line-copy{font:17px/1.7 "Songti SC","Noto Serif CJK SC","SimSun",serif;color:#595c4b;letter-spacing:.07em;margin:0;animation:scene-in .65s ease}
+.opening h1{left:10%;top:23%;font-size:clamp(90px,11vw,155px)}
+.opening-flower{right:8%;top:9%;height:82%;width:40%}
+.opening-date{font-size:15px;bottom:10%}
+.magazine{background:#e6e2d4}
+.torn-magazine{position:absolute;inset:3% 2%;width:96%;height:94%;overflow:visible;filter:drop-shadow(2px 6px 4px #342b232a)}
+.magazine-under{inset:4%;overflow:hidden;background:#e0d9c5}
+.magazine-under img{left:20%;top:0;width:60%;height:100%;object-fit:cover;object-position:center 42%;filter:brightness(1.1)}
+.center-tear{left:25%;top:0;width:50%;height:100%}
+.center-tear .peel-surface{background:none!important}
+.photo-scene{background:#c9d2bf}
+.photo-mat{height:84%;top:8%;transform:translateX(-50%) rotate(-4deg);padding:0;background:#fffdf5}
+.photo-image{height:77%;left:6%;right:6%;top:5%}
+.photo-image img{width:100%;height:100%;left:0;top:0;object-fit:cover;object-position:50% 34%;filter:brightness(1.2) saturate(.9)}
+.photo-film{left:6%;right:6%;top:5%;height:77%}
+.photo-mat>b{font:italic 26px Georgia;right:10%;bottom:7%}
+.stamps-grid{inset:20% 7% 17%;gap:5%}
+.stamp-design{border:6px dotted #e5ddc9;padding:8%;background:#fff9e9!important;outline:0}
+.stamp-design img,.stamp-design.stamp-3 img{height:88%;width:100%;object-fit:cover;padding:0}
+.stamp-design small{bottom:3%;font-size:7px;left:10%;letter-spacing:.1em}
+.stamp-design b{top:auto;bottom:3%;right:9%;font:12px Georgia}
+.stamp-design.stamp-3{border:6px dotted #e5ddc9}
+.stamp-peel.stamp-pos-3{height:auto;top:0;bottom:0}
+.stamp-1 img{filter:brightness(1.2)}
+.postmark{top:3%;right:6%;height:110px;width:110px;opacity:.6;z-index:0}
+.postal-scene::after{content:'';position:absolute;left:7%;right:7%;bottom:9%;height:1px;background:#8d7c5d26;pointer-events:none}
+.botanical-note{top:34%}.botanical-note em{font-size:clamp(30px,4.5vw,58px)}
+.pink-flower{right:22%;width:51%;height:89%;top:7%}
+.pearl-title{font-size:clamp(35px,5vw,67px);font-style:italic}
+.envelope-label{top:15%;left:9%;font-size:10px}
+.pearl-envelope{inset:0}
+.pearl-envelope>.peel-surface{background:linear-gradient(155deg,#f7f3e193,#e2e5d2b8 70%,#fff9eacc)}
+.embroidered-cloth{inset:12% 10% 12%;transform:rotate(-3deg)}
+.embroidered-cloth img{object-fit:cover;object-position:50% 47%}
+.thread-pull{bottom:1%;left:44%;width:49%;height:24%}
+.under-tracing>span{display:none}
+.final-collage{margin-top:15px}.final-art{height:min(82svh,860px)}
+.final-bottom{justify-content:flex-end;margin-top:5px}
+@media(max-width:700px){
+ .game-shell{padding:13px 3vw}.site-header{padding:0 2vw}.stage{width:94vw;height:69svh;min-height:420px;margin-top:13px}
+ .game-footer{width:94vw;margin-top:20px;min-height:55px}.chapter{position:static;align-self:flex-start;padding-top:4px;flex-shrink:0}.chapter>span{font-size:17px}.chapter i{font-size:9px}
+ .chapter-copy{max-width:85%}.chapter-copy .birthday-line-copy{font-size:15px;line-height:1.75;letter-spacing:.035em;text-align:left}
+ .opening h1{font-size:24vw;left:9%;top:32%}.opening-flower{right:0;top:4%;width:62%;height:72%}
+ .torn-magazine{inset:10% 1%;width:98%;height:80%}
+ .center-tear{left:20%;width:60%}
+ .photo-mat{width:82%;height:auto;top:18%}.photo-mat>b{font-size:22px}
+ .stamps-grid{inset:12% 10% 12%;gap:8% 14%;grid-template-columns:repeat(2,1fr)}.stamp-slot{aspect-ratio:.82}.stamp-design small{font-size:6px}.postmark{top:40%;right:37%;width:80px;height:80px}
+ .botanical-note{top:14%;right:6%}.botanical-note em{font-size:35px}.pink-flower{width:85%;right:5%;top:10%;height:83%}
+ .embroidered-cloth{inset:16% 8% 18%}.thread-pull{left:33%;width:63%;bottom:5%}
+ .usagi-paper{height:auto;width:64%;aspect-ratio:335/463;left:50%;top:18%}
+ .final-collage{width:98vw;margin-left:-2vw;margin-top:10px}.final-art{height:78svh;max-height:none;min-height:0}.final-bottom{margin-top:0}
+}
+@media(prefers-reduced-motion:reduce){.physical-fold .fold-shadow{filter:none}.chapter-copy .birthday-line-copy{animation:none}}
